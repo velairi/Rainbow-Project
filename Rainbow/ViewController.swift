@@ -16,7 +16,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var greenButton: UIButton!
     @IBOutlet weak var blueButton: UIButton!
     @IBOutlet weak var purpleButton: UIButton!
-    
+    @IBOutlet weak var whiteButton: UIButton!
+    @IBOutlet weak var blackButton: UIButton!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,6 +28,8 @@ class ViewController: UIViewController {
         self.greenButton.addTarget(self, action: #selector(greenButtonPressed), for: .touchUpInside)
         self.blueButton.addTarget(self, action: #selector(blueButtonPressed), for: .touchUpInside)
         self.purpleButton.addTarget(self, action: #selector(purpleButtonPressed), for: .touchUpInside)
+        self.whiteButton.addTarget(self, action: #selector(whiteButtonPressed), for: .touchUpInside)
+        self.blackButton.addTarget(self, action: #selector(blackButtonPressed), for: .touchUpInside)
     }
     
     @objc func redButtonPressed() {
@@ -45,11 +49,19 @@ class ViewController: UIViewController {
     }
     
     @objc func blueButtonPressed() {
-        self.view.backgroundColor = .blue
+        self.view.backgroundColor = UIColor(red: 0/255, green: 0/255, blue: 255/255, alpha: 1.0)
     }
     
     @objc func purpleButtonPressed() {
         self.view.backgroundColor = .purple
+    }
+
+    @objc func whiteButtonPressed() {
+        self.view.backgroundColor = .white
+    }
+
+    @objc func blackButtonPressed() {
+        self.view.backgroundColor = .black
     }
     
 }
