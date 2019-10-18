@@ -21,7 +21,6 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.redButton.addTarget(self, action: #selector(redButtonPressed), for: .touchUpInside)
         self.orangeButton.addTarget(self, action: #selector(orangeButtonPressed), for: .touchUpInside)
         self.yellowButton.addTarget(self, action: #selector(yellowButtonPressed), for: .touchUpInside)
@@ -63,6 +62,4 @@ class ViewController: UIViewController {
     @objc func blackButtonPressed() {
         self.view.backgroundColor = .black
     }
-    
 }
-
